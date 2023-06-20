@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Node
 {
 public:
@@ -13,6 +14,7 @@ public:
         this->prev = NULL;
     }
 };
+
 void print_normal(Node *head)
 {
     Node *tmp = head;
@@ -23,6 +25,7 @@ void print_normal(Node *head)
     }
     cout << endl;
 }
+
 void print_reverse(Node *tail)
 {
     Node *tmp = tail;
@@ -33,6 +36,7 @@ void print_reverse(Node *tail)
     }
     cout << endl;
 }
+
 int size(Node *head)
 {
     Node *tmp = head;
@@ -44,6 +48,7 @@ int size(Node *head)
     }
     return cnt;
 }
+
 void delete_at_position(Node *head, int pos)
 {
     Node *tmp = head;
@@ -56,6 +61,7 @@ void delete_at_position(Node *head, int pos)
     tmp->next->prev = tmp;
     delete deleteNode;
 }
+
 void delete_tail(Node *&head, Node *&tail)
 {
     Node *deleteNode = tail;
@@ -68,6 +74,7 @@ void delete_tail(Node *&head, Node *&tail)
     }
     tail->next = NULL;
 }
+
 void delete_head(Node *&head, Node *&tail)
 {
     Node *deleteNode = head;
@@ -80,6 +87,7 @@ void delete_head(Node *&head, Node *&tail)
     }
     head->prev = NULL;
 }
+
 int main()
 {
     Node *head = new Node(10);
@@ -109,5 +117,6 @@ int main()
 
     print_normal(head);
     print_reverse(tail);
+
     return 0;
 }
