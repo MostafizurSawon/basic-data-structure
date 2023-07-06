@@ -62,7 +62,6 @@ public:
   void pop()
   {
     // Write your code here
-    sz--;
     if (head == NULL)
       return;
     Node *deleteNode = head;
@@ -70,6 +69,7 @@ public:
     head = head->next;
 
     delete deleteNode;
+    sz--;
   }
 
   int getTop()
