@@ -20,7 +20,7 @@ public:
       return 0;
 
     int l = tilt(root->left);
-    int e = tilt(root->right);
+    int r = tilt(root->right);
 
     sum += abs(l - r);
     return l + r + root->val;
