@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  set<int> s;
+  int n;
+  cin >> n;
+  while (n--)
+  {
+    int x;
+    cin >> x;
+    s.insert(x); // O(logN)
+  }
+  cout << s.count(5) << endl; // O(logN)
+  if (s.count(4))
+    cout << "YES" << endl;
+  else
+    cout << "NO" << endl;
+  for (auto it = s.begin(); it != s.end(); it++)
+  {
+    cout << *it << endl;
+  }
+
+  return 0;
+}
+
+/*
+7
+1 5 2 4 1 5 4
+
+Output->
+1
+2
+4
+5
+*/
+
+/*
+sorted
+duplicate
+search
+*/
